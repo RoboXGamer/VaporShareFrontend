@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VaporShare | Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="auth-wrapper">
+    <div class="auth-card">
+      <h1 id="auth-title">Welcome Back</h1>
+      <p id="auth-desc">Login to your VaporShare account</p>
+
+      <form id="auth-form">
+        <div class="form-group" id="fullname-group" style="display: none">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="John Doe" />
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required placeholder="johndoe" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="john@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="••••••••"
+          />
+        </div>
+        <div class="form-group" id="role-group" style="display: none">
+          <label for="role">Role</label>
+          <select id="role">
+            <option value="sender">Sender (Upload Files)</option>
+            <option value="receiver">Receiver (View Files)</option>
+          </select>
+        </div>
+        <button type="submit" id="auth-btn">Login</button>
+        <button type="button" class="outline" id="toggle-auth">
+          Need an account? Register
+        </button>
+      </form>
+    </div>
+
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>
